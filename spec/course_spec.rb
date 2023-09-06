@@ -26,7 +26,7 @@ RSpec.describe Course do
       student1 = Student.new({name: "Morgan", age: 21})
       student2 = Student.new({name: "Jordan", age: 29})
       course.enroll(student1)
-      # expect(course.full?).to eq false
+      expect(course.full?).to eq false
       course.enroll(student2)
       expect(course.full?).to be true
     end
@@ -35,14 +35,12 @@ RSpec.describe Course do
   describe "#enroll method" do
     it "adds student objects to the students array" do
       course = Course.new("Calculus", 2)
-      # expect(course.full?).to eq false
       student1 = Student.new({name: "Morgan", age: 21})
       student2 = Student.new({name: "Jordan", age: 29})
       course.enroll(student1)
       course.enroll(student2)
       expect(course.students).not_to be nil
       expect(course.students.length).to be 2
-      # expect(course.full?).to eq true
     end
   end
 end
