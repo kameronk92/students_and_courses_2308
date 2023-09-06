@@ -30,7 +30,6 @@ RSpec.describe Gradebook do
       student2 = Student.new({name: "Jordan", age: 29})
       course.enroll(student1)
       course.enroll(student2)
-      require 'pry'; binding.pry
-      gradebook.list_all_students
+      expect(gradebook.list_all_students).not_to be nil
     end
 end

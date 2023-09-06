@@ -11,8 +11,7 @@ class Gradebook
   end
 
   def list_all_students
-    list_all_students = {}
-      list_all_students["course"] = courses
-      list_all_students["student"] = courses.student
+    list_all_students = {
+      self.courses[0].name => self.courses[0].students}
   end
 end
