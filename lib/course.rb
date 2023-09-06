@@ -1,6 +1,7 @@
 class Course
   attr_reader :name,
-              :capacity
+              :capacity,
+              :students
 
   def initialize(name, capacity)
     @name = name
@@ -8,5 +9,7 @@ class Course
     @students = []
   end
 
-
+  def enroll(student)
+    @students << student
+  end
 end
