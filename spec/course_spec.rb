@@ -19,7 +19,7 @@ RSpec.describe Course do
     expect(course.students).to eq([])
   end
 
-  it "has an #enroll method" do
+  describe "#enroll method" do
     it "checks if the class is full" do
       course = Course.new("Calculus", 2)
       expect(course.full?).to eq false
@@ -29,4 +29,6 @@ RSpec.describe Course do
       course.enroll(student2)
       expect(course.students).to not_be nil
       expect(course.full?).to eq true
+    end
+  end
 end

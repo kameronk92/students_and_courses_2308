@@ -4,7 +4,7 @@ class Student
   def initialize(student_data)
     @name = student_data[:name]
     @age = student_data[:age]
-    @scores =[]
+    @scores = []
     @grade = grade
   end
 
